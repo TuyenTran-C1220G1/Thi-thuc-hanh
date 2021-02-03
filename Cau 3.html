@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function isFibonacci(number) {
+        if (number == 0 || number == 1) {
+            return true;
+        }
+        let f1 = 1;
+        let f2 = 2;
+        let total;
+        for (let i = 0; i < number - 2; i++) {
+            if ((f1 + f2) === number) {
+                return true;
+            }
+            total = f1 + f2;
+            f1 = f2;
+            f2 = total;
+        }
+        return false;
+    }
+    console.log(isFibonacci(21));
+
+</script>
